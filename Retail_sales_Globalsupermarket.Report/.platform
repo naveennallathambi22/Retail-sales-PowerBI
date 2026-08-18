@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Retail_sales_Globalsupermarket"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0bf310ac-1692-496e-ba36-364c45a6a4f3"
+  }
+}

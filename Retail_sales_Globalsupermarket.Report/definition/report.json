@@ -1,0 +1,233 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU07",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Accessible_Tidal4474769418493455.json",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU07",
+          "path": "BaseThemes/CY26SU07.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "_5AC09DB3-1D30-4E0F-93A9-6CECA14580712787654315.png",
+          "path": "_5AC09DB3-1D30-4E0F-93A9-6CECA14580712787654315.png",
+          "type": "Image"
+        },
+        {
+          "name": "_71728934-A1D0-4D6D-8C8E-4AFD509020526112278249.png",
+          "path": "_71728934-A1D0-4D6D-8C8E-4AFD509020526112278249.png",
+          "type": "Image"
+        },
+        {
+          "name": "abstract-techno-background-wit9125588207913312.jpg",
+          "path": "abstract-techno-background-wit9125588207913312.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Accessible_Tidal4474769418493455.json",
+          "path": "Accessible_Tidal4474769418493455.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Close_Image-removebg-preview3465051965279201.png",
+          "path": "Close_Image-removebg-preview3465051965279201.png",
+          "type": "Image"
+        },
+        {
+          "name": "funnel8364551037251508.png",
+          "path": "funnel8364551037251508.png",
+          "type": "Image"
+        },
+        {
+          "name": "Gemini_Generated_Image_a9jkrra6246034451977386.png",
+          "path": "Gemini_Generated_Image_a9jkrra6246034451977386.png",
+          "type": "Image"
+        },
+        {
+          "name": "Home_Png6742689565355792.png",
+          "path": "Home_Png6742689565355792.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-boxes-486273577192625012.png",
+          "path": "icons8-boxes-486273577192625012.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-business-management-4824095037816043252.png",
+          "path": "icons8-business-management-4824095037816043252.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-buying-48786511195031417.png",
+          "path": "icons8-buying-48786511195031417.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-discount-6431402157102536954.png",
+          "path": "icons8-discount-6431402157102536954.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-estimate-48970706751539256.png",
+          "path": "icons8-estimate-48970706751539256.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-graph-axes-487094317235213454.png",
+          "path": "icons8-graph-axes-487094317235213454.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-increase-profits-64092465093706251.png",
+          "path": "icons8-increase-profits-64092465093706251.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-money-5005801653008332475.png",
+          "path": "icons8-money-5005801653008332475.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-online-shop-4844512753688227547.png",
+          "path": "icons8-online-shop-4844512753688227547.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-percentage-growth-489120070559556813.png",
+          "path": "icons8-percentage-growth-489120070559556813.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-region-4843871897009150296.png",
+          "path": "icons8-region-4843871897009150296.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-shopping-cart-48636801540296822.png",
+          "path": "icons8-shopping-cart-48636801540296822.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-stocks-growth-486435598719253607.png",
+          "path": "icons8-stocks-growth-486435598719253607.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-stocks-growth-487945388754621029.png",
+          "path": "icons8-stocks-growth-487945388754621029.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-users-484257777232439288.png",
+          "path": "icons8-users-484257777232439288.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-warranty-482242932927138579.png",
+          "path": "icons8-warranty-482242932927138579.png",
+          "type": "Image"
+        },
+        {
+          "name": "luke-chesser-pJadQetzTkI-unspl35693854967022565.jpg",
+          "path": "luke-chesser-pJadQetzTkI-unspl35693854967022565.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "png-clipart-globe-drawing-whit6987851100488696.png",
+          "path": "png-clipart-globe-drawing-whit6987851100488696.png",
+          "type": "Image"
+        },
+        {
+          "name": "png-clipart-globe-drawing-whit9612557126905679.png",
+          "path": "png-clipart-globe-drawing-whit9612557126905679.png",
+          "type": "Image"
+        },
+        {
+          "name": "shopping_bag-removebg-preview2709320624372118.png",
+          "path": "shopping_bag-removebg-preview2709320624372118.png",
+          "type": "Image"
+        },
+        {
+          "name": "side8803559468371285.JPG",
+          "path": "side8803559468371285.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Up_graph-removebg-preview0640846088804572.png",
+          "path": "Up_graph-removebg-preview0640846088804572.png",
+          "type": "Image"
+        },
+        {
+          "name": "Up_graph-removebg-preview800016526949932.png",
+          "path": "Up_graph-removebg-preview800016526949932.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

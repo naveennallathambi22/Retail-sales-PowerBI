@@ -1,0 +1,119 @@
+table Dim_Date
+	lineageTag: 94bd535f-0860-49d7-90cf-108bf97e6131
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Short Date
+		lineageTag: 1857a533-80d4-488a-a320-961b6e220e89
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 3287a937-d04f-47e8-8411-a1e960b50657
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month No'
+		formatString: 0
+		lineageTag: b7f76e32-aa14-486c-81ce-4e4ee1e5561c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month No]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 66fee278-f2f3-4d9d-8934-503be813c1ba
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: 'Month No'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Short'
+		lineageTag: a0d12d6c-bb22-482e-a4c2-2d7c1edd9c0f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Short]
+		sortByColumn: 'Month No'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: e4e8b742-6cb7-4f8d-8081-b815a5a35cb6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Year Month'
+		lineageTag: c4262f98-990e-48ef-a95e-102712b5c0b6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year Month]
+		sortByColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: 97d4501b-cfb7-45a7-94e3-c242a2a5297a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday No'
+		formatString: 0
+		lineageTag: 28c67e77-7859-45b7-84f3-2395a85e0bd0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday No]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day = DAY(Dim_Date[Date])
+		formatString: 0
+		lineageTag: c3ac9393-c40b-4b4c-9514-515628783d7f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Start Date' = DATE(YEAR(Dim_Date[Date]), MONTH(Dim_Date[Date]), 1)
+		formatString: Short Date
+		lineageTag: 31b8a007-3348-48e4-a614-873566ec64e6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Date = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR (
+				        MIN ( 'Orders'[Order Date] ),
+				        MAX ( 'Orders'[Order Date] )
+				    ),
+				    "Year", YEAR ( [Date] ),
+				    "Month No", MONTH ( [Date] ),
+				    "Month", FORMAT ( [Date], "MMMM" ),
+				    "Month Short", FORMAT ( [Date], "MMM" ),
+				    "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+				    "Year Month", FORMAT ( [Date], "YYYY-MM" ),
+				    "Weekday", FORMAT ( [Date], "dddd" ),
+				    "Weekday No", WEEKDAY ( [Date], 2 )
+				)
+
+	annotation PBI_Id = 3320e0b5d15445629e392f6dfc41dc70
+

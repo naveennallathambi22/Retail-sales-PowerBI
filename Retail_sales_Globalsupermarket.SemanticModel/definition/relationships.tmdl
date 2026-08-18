@@ -1,0 +1,12 @@
+relationship 974e5c55-6f40-a12d-f304-e80d7d8c1d3f
+	fromColumn: Orders.'Order Date'
+	toColumn: Dim_Date.Date
+
+relationship 40ca3b6b-f136-acc7-b33d-a24abc57eced
+	fromColumn: Orders.'Customer ID'
+	toColumn: Dim_Customer.'Customer ID'
+
+relationship 9c19ad7d-c229-5e62-7193-7246ccf70648
+	fromColumn: Orders.'Product ID'
+	toColumn: Dim_Product.'Product ID'
+

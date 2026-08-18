@@ -1,0 +1,46 @@
+table Dim_Customer
+	lineageTag: c7796a49-a74a-47d2-a71a-fe17ea37bf22
+
+	column 'Customer ID'
+		lineageTag: a13fad33-71b9-4677-acfd-10cc49c4abb8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Customer ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Name'
+		lineageTag: 4cf01fae-f5de-4602-b096-ff21ba3b0b05
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Customer Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		lineageTag: 6a6ab687-0183-4e72-83d8-b5b4082e90ea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Segment]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Customer = calculated
+		mode: import
+		source =
+				
+				DISTINCT (
+				    SELECTCOLUMNS (
+				        FILTER (
+				            Orders,
+				            NOT ISBLANK ( Orders[Customer ID] )
+				                && Orders[Customer ID] <> ""
+				        ),
+				        "Customer ID", Orders[Customer ID],
+				        "Customer Name", Orders[Customer Name],
+				        "Segment", Orders[Segment]
+				    )
+				)
+
+	annotation PBI_Id = 0c48bc0210ed43b6ad96a248f7c2a9e6
+
